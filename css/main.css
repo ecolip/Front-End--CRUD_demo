@@ -1,0 +1,47 @@
+
+body{
+	box-sizing: border-box;
+}
+.title{
+	font-size: 30px;
+    margin: 20px 0;
+    font-weight: 600;
+}
+ul{
+	width: 500px;
+}
+li{
+	border-bottom: 1px solid #ccc;
+}
+.content{
+	width: 80%;
+}
+input[type="text"]{
+	display: none;
+	width: 80%;
+}
+.btn:focus{
+	box-shadow: none;
+}
+.btn[data-action="delete"]{
+	font-weight: 600;
+}
+.btn[data-action="delete"]:hover{
+	background-color: #eee;
+}
+#add-todo{
+	width: 20%;
+    margin: 20px auto 0;
+    font-size: 20px;
+	font-weight: 800;
+	background: #eee;
+}
+li.editing .content{
+	display: none;
+}
+li.editing [type="text"]{
+	display: block;
+}
+li .content.finish{
+	text-decoration: line-through;
+}

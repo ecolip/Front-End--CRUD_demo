@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To do list</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+	<div class="title text-center">CRUD Demo</div>
+    <ul id="todo-list" class="list-unstyled mb-0 mx-auto">
+    <li class="d-flex align-items-center mb-3">
+        <input class="mr-4" type="checkbox" >
+        <span class="content mr-auto">todo item</span>
+        <input class="mr-auto" type="text" value="todo item">
+        <button class="btn delete" data-action="delete">x</button>
+    </li>
+    <li class="d-flex align-items-center mb-3">
+        <input class="mr-4" type="checkbox" >
+        <span class="content mr-auto">todo item</span>
+        <input class="mr-auto "type="text" value="todo item">
+        <button class="btn delete" data-action="delete">x</button>
+    </li>
+    <li class="d-flex align-items-center mb-3">
+        <input class="mr-4" type="checkbox" >
+        <span class="content mr-auto">todo item</span>
+        <input class="mr-auto" type="text" value="todo item">
+        <button class="btn delete" data-action="delete">x</button>
+	</li>
+    </ul>
+<button id="add-todo" class="btn btn-block">+</button>
+
+<script id="todo-list-template" type="text/x-handlebars-template">
+	<li data-id="{{id}}" class="{{#if is_complete}}complete{{/if}}">
+		<div class="checkbox mr-4"></div>		
+		<div class="content">{{content}}</div>
+		<div class="action"><a href="#">x</a></div>
+	</li>
+</script>
+
+</body>
+</html>
