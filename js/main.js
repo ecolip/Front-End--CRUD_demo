@@ -3,10 +3,12 @@ $(document).ready(function(){
 	$('#add-todo').click(function(e){
 		// console.log('do');
 		var todoItem = prompt('What do you add?');
-		
-		var cloneli = $('li').eq(0).clone();
-		cloneli.find('.content').text(todoItem);
-		$('#todo-list').append(cloneli);
+
+		if(todoItem.length>0){
+			var cloneli = $('li').eq(0).clone();
+			cloneli.find('.content').text(todoItem);
+			$('#todo-list').append(cloneli);
+		}
 	});
 
 
@@ -34,5 +36,8 @@ $(document).ready(function(){
 	$('#todo-list').on('click','li [type="checkbox"]', function (e){
 		$(e.currentTarget).siblings('.content').toggleClass('finish');
 	});
+
+	//sort
+	$('#todo-list').sortable();
 	
 });
